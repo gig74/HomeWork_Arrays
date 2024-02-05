@@ -338,9 +338,9 @@ public class Matrices {
                         int offsetCol = 0 ;
                         for(int iCol = 0; iCol < matrix.length; iCol++){
                             if (iCol == i) { // Столбец совпал
-                                offsetCol = 1 ; // Пропускаем строку и задаём смещение на одну строку
+                                offsetCol = 1 ; // Пропускаем столбец и задаём смещение на один столбец
                             }
-                            else { // для всех остальных строк
+                            else { // для всех остальных столбцов
                                 smallerMatrix[iRow-1][iCol-offsetCol] = matrix[iRow][iCol];
                             }
 
@@ -450,20 +450,20 @@ public class Matrices {
         System.out.println("Determinant of Matrix H:");
         System.out.println(det);
 
-//        // Дополнительная проба не входящая в задание
-//        // Создание квадратной матрицы 4x4
-//        Matrix H4x4 = new Matrix(4, 4);
-//        H4x4.rows[0] = new int[]{1, 1, 1, -1};
-//        H4x4.rows[1] = new int[]{0, -3, 0, 0};
-//        H4x4.rows[2] = new int[]{0, 0, 2, 0};
-//        H4x4.rows[3] = new int[]{0, 0, 0, -5};
-//        System.out.println("Matrix H4x4:");
-//        System.out.println(H4x4.toString());
-//
-//        // Вычисление определителя матрицы H
-//        int det4x4 = H4x4.determinant();
-//        System.out.println("Determinant of Matrix H4x4:");
-//        System.out.println(det4x4);
+        // Дополнительная проба не входящая в задание
+        // Создание квадратной матрицы 4x4
+        Matrix H4x4 = new Matrix(4, 4);
+        H4x4.rows[0] = new int[]{1, 1, 1, -1};
+        H4x4.rows[1] = new int[]{0, -3, 0, 0};
+        H4x4.rows[2] = new int[]{0, 0, 2, 0};
+        H4x4.rows[3] = new int[]{0, 0, 0, -5};
+        System.out.println("Matrix H4x4:");
+        System.out.println(H4x4.toString());
+
+        // Вычисление определителя матрицы H
+        int det4x4 = H4x4.determinant();
+        System.out.println("Determinant of Matrix H4x4:");
+        System.out.println(det4x4);
 
     }
 }
