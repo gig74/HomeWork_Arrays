@@ -340,6 +340,7 @@ public class Matrices {
                             if (iCol == i) { // Столбец совпал
                                 offsetCol = 1 ; // Пропускаем столбец и задаём смещение на один столбец
                             }
+                            
                             else { // для всех остальных столбцов
                                 smallerMatrix[iRow-1][iCol-offsetCol] = matrix[iRow][iCol];
                             }
